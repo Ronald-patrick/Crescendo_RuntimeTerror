@@ -1,23 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../CSS/Card.css';
-const Card = () => {
+const Card = (props) => {
+    
     return (
         <div className='card'>
-                <img src="./pasta.jpg"></img>
-                <h1>Italian Pasta</h1>
+                <img src={props.image}></img>
+                <h1>{props.title}</h1>
                 <div className='carddetails'>
                     <div className='carddet'>
-                    <i class="bi bi-alarm"></i>
-                    45 mins
-                    </div>
-                    <div className='divider'></div>
-                    <div className='carddet'>
-                    <i class="bi bi-basket"></i>
-                    450 kcal
+                        {props.tags}
                     </div>
                     
                 </div>
-                <button>More</button>
+                <Link to={`/details/${props.id}`} className='btn'>More</Link>
+                
                 
         </div>
         

@@ -9,9 +9,11 @@
     flex-direction: column;
     box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.71);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px;
 }
 .card img{
-    width: 100%;
+    width: 80%;
+    height: 100%;
 
 }
 .card h1{
@@ -30,7 +32,7 @@
     align-items: center;
     flex-direction: column;
 }
-.card button{
+.card a{
     width: 30%;
     height: 2.5em;
     margin-bottom: 10px;
@@ -47,8 +49,13 @@
     border-radius: 40px;
     background-color: rgba(0, 0, 0, 0.424);
 }
-.card button:hover{
+.card a:hover{
     border: 2px solid red;
     background-color:transparent;
     color: black;
+}
+
+.card:hover{
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.05);
 }
